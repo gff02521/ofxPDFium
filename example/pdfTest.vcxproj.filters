@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPDFium\src\ofxPDFium.cpp">
+			<Filter>addons\ofxPDFium\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPDFium">
+			<UniqueIdentifier>{9678A1A3-3366-1FDA-87D3-57B7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPDFium\src">
+			<UniqueIdentifier>{9C0482A0-BD4F-60F5-798A-B939}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPDFium\libs">
+			<UniqueIdentifier>{1E87D106-7FC7-1B0C-ED5F-2B9B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPDFium\libs\public">
+			<UniqueIdentifier>{521C9D5B-50AA-17FF-013A-785F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPDFium\libs\public\cpp">
+			<UniqueIdentifier>{5D37C614-425B-48F5-21A5-9B50}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\src\ofxPDFium.h">
+			<Filter>addons\ofxPDFium\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\cpp\fpdf_deleters.h">
+			<Filter>addons\ofxPDFium\libs\public\cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\cpp\fpdf_scopers.h">
+			<Filter>addons\ofxPDFium\libs\public\cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdfview.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_annot.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_attachment.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_catalog.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_dataavail.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_doc.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_edit.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_ext.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_flatten.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_formfill.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_fwlevent.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_ppo.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_progressive.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_save.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_searchex.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_structtree.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_sysfontinfo.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_text.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPDFium\libs\public\fpdf_transformpage.h">
+			<Filter>addons\ofxPDFium\libs\public</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>
