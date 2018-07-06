@@ -30,8 +30,8 @@
 #include "fpdf_text.h"
 #include "fpdf_transformpage.h"
 #include "fpdfview.h"
-#include "cpp/fpdf_deleters.h"
-#include "cpp/fpdf_scopers.h"
+#include "fpdf_deleters.h"
+#include "fpdf_scopers.h"
 
 using namespace std;
 
