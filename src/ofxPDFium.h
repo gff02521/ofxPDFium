@@ -41,6 +41,13 @@ public:
 	ofxPDFium(std::string file);
 	~ofxPDFium();
 
+	enum RasterizeMode : int {
+		RasterizeFill,
+		RasterizeFit
+	};
+
+	void setRasterizeSize(int width, int height, RasterizeMode mode = RasterizeFit);
+	
 	void loadPage(int pageNum);
 	void draw(float x, float y, float z = 0.);
 	void draw(float x, float y, float w, float h);
@@ -48,8 +55,17 @@ public:
 	void drawToHeight(float x, float y, float heightToScaleTo);
 	void drawToWidth(float x, float y, float widthToScaleTo);
 
+	int getWidth();
+	int getHeight();
+
 	int getCurrentPage() { return m_currPage; }
 	int getPageCount() { return m_pageCount; }
+
+	ofImage & currentPageImage();
+
+private:
+	RasterizeMode rasterizeMode;
+	int rasterizeWidth, rasterizeHeight;
 
 protected:
 	void WritePpm(int num, const char* buffer, int stride, int width, int height);

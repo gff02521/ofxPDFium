@@ -77,6 +77,9 @@ void ofxPDFium::Unsupported_Handler(UNSUPPORT_INFO*, int type)
 ofxPDFium::ofxPDFium(std::string file)
 	: m_file(file), m_fileBuf(NULL), m_currPage(-1), m_pageCount(0)
 {
+	rasterizeMode = RasterizeMode::RasterizeFit;
+	rasterizeWidth = 1024;
+	rasterizeHeight = 768;
 	loadpdf();
 }
 
@@ -117,6 +120,12 @@ void ofxPDFium::loadpdf()
 			}
 		}
 	}
+}
+
+void ofxPDFium::setRasterizeSize(int width, int height, RasterizeMode mode) {
+	rasterizeWidth = width;
+	rasterizeHeight = height;
+	rasterizeMode = mode;
 }
 
 void ofxPDFium::loadPage(int pageNum)
@@ -194,9 +203,24 @@ void ofxPDFium::loadPage(int pageNum)
 
 		FORM_OnAfterLoadPage(page, form);
 		FORM_DoPageAAction(page, form, FPDFPAGE_AACTION_OPEN);
+		
+		double pageWidth = FPDF_GetPageWidth(page);
+		double pageHeight = FPDF_GetPageHeight(page);
 
-		int width = static_cast<int>(FPDF_GetPageWidth(page));
-		int height = static_cast<int>(FPDF_GetPageHeight(page));
+		float scaleW = rasterizeWidth / pageWidth;
+		float scaleH = rasterizeHeight / pageHeight;
+		float scale;
+		switch (rasterizeMode) {
+		case RasterizeMode::RasterizeFill:
+			scale = MAX(scaleW, scaleH);
+			break;
+		case RasterizeMode::RasterizeFit:
+			scale = MIN(scaleW, scaleH);
+			break;
+		}
+		int width = pageWidth * scale + 0.5;
+		int height = pageHeight * scale + 0.5;
+
 		FPDF_BITMAP bitmap = FPDFBitmap_Create(width, height, 0);
 		//(bitmap, 0, 0, width, height, 255, 255, 255, 255);
 		FPDFBitmap_FillRect(bitmap, 0, 0, width, height, 0xffffffff);
@@ -251,6 +275,18 @@ void ofxPDFium::drawToWidth(float x, float y, float widthToScaleTo)
 {
 	float scale = widthToScaleTo/m_pdfImg.getWidth();
 	drawToScale(x, y, scale);
+}
+
+int ofxPDFium::getWidth() {
+	return m_pdfImg.getWidth();
+}
+
+int ofxPDFium::getHeight() {
+	return m_pdfImg.getHeight();
+}
+
+ofImage & ofxPDFium::currentPageImage() {
+	return m_pdfImg;
 }
 
 void ofxPDFium::WritePpm(int num, const char* buffer, int stride, int width, int height) 
